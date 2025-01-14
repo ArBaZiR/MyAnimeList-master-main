@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+Anime Explorer – это приложение для просмотра подробной информации об аниме, включая жанры, студии и рейтинги. Данные берутся из [Jikan API](https://jikan.moe).  
+ ## Запуск приложения
+ 
+  ### 1. Установите зависимости Убедитесь, что у вас установлен Node.js версии 14 или выше.   
+  
+   npm install
+   
+   
+   ### 2\. Запуск приложения для разработки 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```bash
+npm run dev
+ 
+Приложение будет доступно по адресу: [http://localhost:5173](http://localhost:5173) 
 
-Currently, two official plugins are available:
+### 3\. Сборка для продакшена 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash 
+npm run build
 
-## Expanding the ESLint configuration
+--------------------
+📁 Структура проекта  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+src/ ├── components/ # Компоненты интерфейса 
+├── pages/ # Основные страницы приложения 
+├── types/ # Определения типов TypeScript 
+├── styles/ # Стили приложения 
+└── App.tsx # Точка входа приложения
+--------------
+ 🛠 Технологии
 
-- Configure the top-level `parserOptions` property like this:
+* React – создание пользовательского интерфейса 
+* TypeScript – типизация кода 
+* Tailwind CSS – стилизация приложения 
+* React Router – маршрутизация 
+* Jikan API – получение данных об аниме
+--------------
+🌟 Особенности
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* Просмотр детальной информации об аниме
+* Сортировка и фильтрация списка аниме 
+* Отображение связанных картинок и студий
+-------------------------
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+🐛 Отладка и тестирование
+* Убедитесь, что API доступен и работает корректно
+* Используйте DevTools браузера для проверки ошибок и логирования
